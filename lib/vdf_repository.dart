@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_database/firebase_database.dart';
-import 'package:firebase_database/ui/firebase_animated_list.dart';
+//import 'package:firebase_core/firebase_core.dart';
+//import 'package:firebase_database/firebase_database.dart';
+//import 'package:firebase_database/ui/firebase_animated_list.dart';
 
 const DB_URL = 'https://varfdeforma.firebaseio.com/';
 
@@ -26,25 +26,29 @@ class VDFEvent {
 
 class Repository {
 
-  static Future<List<VDFEvent>> allEvents() {
+//  static Future<List<VDFEvent>> allEvents() {
+//
+//    var ref = FirebaseDatabase.instance.reference().child('events');
+//
+//    var completer = new Completer<List<VDFEvent>>();
+//
+//    ref.once().then((snapshot) {
+//
+//      List<VDFEvent> newEvents = new List();
+//
+//      snapshot.value
+//          .where((ss) => ss != null)
+//          .forEach((ss) { newEvents.add(VDFEvent.fromJson(ss)); });
+//
+//      completer.complete(newEvents);
+//    });
+//
+//    return completer.future;
+//  }
 
-    var ref = FirebaseDatabase.instance.reference().child('events');
-
-    var completer = new Completer<List<VDFEvent>>();
-
-    ref.once().then((snapshot) {
-
-      List<VDFEvent> newEvents = new List();
-
-      snapshot.value
-          .where((ss) => ss != null)
-          .forEach((ss) { newEvents.add(VDFEvent.fromJson(ss)); });
-
-      completer.complete(newEvents);
-    });
-
-    return completer.future;
-  }
+    static List<VDFEvent> allEvents() {
+        return dummyevents;
+    }
 
 }
 

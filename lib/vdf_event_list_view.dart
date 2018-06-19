@@ -90,11 +90,7 @@ class _BiklaListViewState extends State<BiklaListView> {
   Future<Null> _onRefresh() async {
 
     _events.clear();
-    return Repository.allEvents().then((newEvents) {
-      setState(() {
-        _events.addAll(newEvents);
-      });
-    });
+    _events.addAll(Repository.allEvents());
   }
 
   @override

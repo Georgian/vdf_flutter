@@ -1,6 +1,7 @@
 import 'package:varfdeforma/vdf_event_map_view.dart';
 import 'package:flutter/material.dart';
 import 'package:varfdeforma/vdf_event_list_view.dart';
+import 'package:varfdeforma/vdf_event_create_page.dart';
 import 'package:varfdeforma/vdf_repository.dart';
 
 class VDFHome extends StatefulWidget {
@@ -33,7 +34,7 @@ class _VDFHomeState extends State<VDFHome> {
                 new Tab(text: "Harta"),
               ],
             ),
-            title: new Text('Bikla'),
+            title: new Text('VDF'),
           ),
           drawer: _buildDrawer(context),
           body: new TabBarView(
@@ -60,6 +61,15 @@ class _VDFHomeState extends State<VDFHome> {
             // leading: const Icon(Icons.account_balance),
             title: const Text('Despre'),
           ),
+          new ListTile(
+              title: const Text('Add Event'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  new MaterialPageRoute(builder: (context) => new VDFEventCreatePage()),
+                );
+              }
+          )
         ],
       ),
     );
