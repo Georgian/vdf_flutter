@@ -62,7 +62,7 @@ class _VDFHomeState extends State<VDFHome> {
             title: const Text('Despre'),
           ),
           new ListTile(
-              title: const Text('Add Event'),
+              title: const Text('Adaugare eveniment'),
               onTap: () {
                 Navigator.push(
                   context,

@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:varfdeforma/vdf_repository.dart';
 import 'package:varfdeforma/vdf_event_details_page.dart';
+import 'package:varfdeforma/vdf_entities.dart';
 
 class BiklaListViewItem extends StatelessWidget {
 
